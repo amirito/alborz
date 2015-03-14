@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>alborz</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/custom.css">
+
+</head>
+<body>
+<section class="navigation-side">
+    <a class="menu-icon"><i class="fa fa-close"></i></a>
+    <ul class="navigation-list">
+        <li><div class="navigation-box"><i class="fa fa-home"></i></div> <a> صفحه اصلی</a></li>
+        <li><div class="navigation-box"><i class="fa fa-cube"></i></div> <a> فروش محصولات</a></li>
+        <li><div class="navigation-box"><i class="fa fa-paper-plane"></i></div> <a> خدمات</a></li>
+        <li><div class="navigation-box"><i class="fa fa-suitcase"></i></div> <a> کاربردها</a></li>
+        <li><div class="navigation-box"><i class="fa fa-list"></i></div> <a> درباره پرینترهای سه بعدی</a></li>
+        <li><div class="navigation-box"><i class="fa fa-book"></i></div> <a> مقالات</a></li>
+        <li><div class="navigation-box"><i class="fa fa-play"></i></div> <a> ویدئو</a></li>
+        <li><div class="navigation-box"><i class="fa fa-phone"></i></div> <a> تماس با ما</a></li>
+
+    </ul>
+    <div class="social-links">
+        <a href="#"><i class="fa fa-facebook"></i></a>
+        <a href="#"><i class="fa fa-twitter"></i></a>
+    </div>
+</section>
+
+<section class="main-content">
+
+</section>
+
+
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function() {
+        var side_flag = true;
+        if (window.matchMedia('(max-width: 768px)').matches) {
+            side_flag = false;
+            $('.menu-icon i').removeClass('fa-close');
+            $('.menu-icon i').addClass('fa-bars');
+            $('.navigation-side').removeClass('open-side');
+            $('.navigation-side').addClass('close-side');
+        } else {
+            side_flag = true;
+            $('.menu-icon i').removeClass('fa-bars');
+            $('.menu-icon i').addClass('fa-close');
+            $('.navigation-side').removeClass('close-side');
+            $('.navigation-side').addClass('open-side');
+        }
+        $('.menu-icon').click(function(){
+            if(side_flag){
+                $('.menu-icon i').removeClass('fa-close');
+                $('.menu-icon i').addClass('fa-bars');
+                $('.navigation-side').removeClass('open-side');
+                $('.navigation-side').addClass('close-side');
+                side_flag = false;
+            }
+            else if(!side_flag){
+                $('.menu-icon i').removeClass('fa-bars');
+                $('.menu-icon i').addClass('fa-close');
+                $('.navigation-side').removeClass('close-side');
+                $('.navigation-side').addClass('open-side');
+                side_flag = true;
+            }
+            //$('.menu-icon i').removeClass('fa-bars');
+            //$('.menu-icon i').addClass('fa-close');
+            //$('.navigation-side').addClass('close-side');
+
+        })
+
+    });
+</script>
+</body>
+</html>
