@@ -151,7 +151,17 @@ body{
     right: 0;
     height: 100%;
     z-index: -1000;
+    padding-left: 100px;
+    overflow: auto;
 }
+.menu-space{
+    padding-left: 250px;
+}
+/*@media (min-width: 768px) {
+    .main-content{
+        padding-left: 250px;
+    }
+}*/
 .menu-icon{
     padding: 5px 35px 5px 5px;
     cursor: pointer;
